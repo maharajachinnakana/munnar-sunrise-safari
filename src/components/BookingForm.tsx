@@ -17,6 +17,8 @@ const BookingForm = () => {
   const [date, setDate] = useState<Date>();
   const [selectedPackage, setSelectedPackage] = useState("");
   const [guests, setGuests] = useState("");
+  const [accommodation, setAccommodation] = useState("");
+  const [vehicle, setVehicle] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +30,8 @@ const BookingForm = () => {
   const packages = [
     { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari - ₹3,000", price: 3000 },
     { value: "chathuranga", label: "Chathuranga Para Safari - ₹2,500", price: 2500 },
-    { value: "annakulam", label: "Annakulam Safari - ₹2,200", price: 2200 }
+    { value: "annakulam", label: "Annakulam Safari - ₹2,200", price: 2200 },
+    { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹12,500", price: 12500 }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -197,13 +200,48 @@ const BookingForm = () => {
                 />
               </div>
 
+              {/* Accommodation & Vehicle Selection for Complete Package */}
+              {selectedPackage === "complete" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="accommodation">Accommodation Type</Label>
+                    <Select value={accommodation} onValueChange={setAccommodation}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Choose accommodation" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="rooms">Deluxe Rooms</SelectItem>
+                        <SelectItem value="tents">Tent Stay Experience</SelectItem>
+                        <SelectItem value="both">Mix of Both</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="vehicle">Vehicle Preference</Label>
+                    <Select value={vehicle} onValueChange={setVehicle}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Choose vehicle type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="sedan">Sedan Car</SelectItem>
+                        <SelectItem value="xuv">XUV / SUV</SelectItem>
+                        <SelectItem value="etios">Etios</SelectItem>
+                        <SelectItem value="innova">Innova</SelectItem>
+                        <SelectItem value="traveler">Traveler (Large Group)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              )}
+
               <div className="space-y-2">
                 <Label htmlFor="message">Special Requests</Label>
                 <Textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  placeholder="Any special requirements or questions?"
+                  placeholder="Any special requirements, dietary preferences, or questions?"
                   rows={3}
                 />
               </div>

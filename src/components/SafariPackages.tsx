@@ -43,6 +43,19 @@ const SafariPackages = () => {
       highlights: ["Tea estate tour", "Mountain trails", "Local culture", "Nature walks"],
       popular: false,
       startTime: "10:00 AM"
+    },
+    {
+      id: 4,
+      title: "Complete Munnar Package",
+      description: "3D/2N complete package with accommodation, meals, transport, sightseeing & safari adventures.",
+      image: jeepImage,
+      price: "₹12,500",
+      duration: "3 Days / 2 Nights",
+      capacity: "6 persons",
+      highlights: ["Stay in Rooms/Tents", "All meals included", "Pickup & Drop", "All safaris", "Munnar sightseeing", "Multiple vehicle options"],
+      popular: true,
+      startTime: "Flexible",
+      packageType: "complete"
     }
   ];
 
@@ -51,10 +64,10 @@ const SafariPackages = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Safari <span className="text-primary">Packages</span>
+            Adventure <span className="text-primary">Packages</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose from our carefully curated offroad adventures in the heart of Munnar
+            Complete tourism solutions with offroad safaris, accommodation, transport & sightseeing in Munnar
           </p>
         </div>
 
