@@ -17,7 +17,7 @@ const SafariPackages = () => {
       pricePerJeep: "₹3,000",
       duration: "4-5 hours",
       capacity: "6 persons",
-      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "world Highest tea plantation", "360° mountain views", "Tea tasting"],
+      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "World Highest tea plantation", "360° mountain views", "Tea tasting"],
       popular: true,
       startTime: "3:30 AM"
     },
@@ -50,22 +50,20 @@ const SafariPackages = () => {
     {
       id: 4,
       title: "Complete Munnar Package",
-      description: "3D/2N complete package with accommodation, meals, transport, sightseeing & safari adventures.",
+      description: "3D/2N complete package with accommodation, breakfast & dinner, campfire, stay & safari adventures.",
       image: kolukkumalaiImage,
       price: "₹3,250",
       totalForSix: "₹19,500",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
       priceBreakdown: {
-        accommodation: { price: "₹500", description: "Stay + Breakfast + Dinner" },
-        campfire: { price: "₹250", description: "Camp Fire Experience" },
+        accommodation: { price: "₹750", description: "Stay + Breakfast + Dinner + Camp fire (Per day Per head) = 2250 for total 3D/2N" },
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
         chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
-        subtotal: "₹2,833",
-        extraCharges: { price: "₹417", description: "Service charges & coordination" }
+        subtotal: "₹2,833","(Per head for 3D/2N)"}
       },
-      highlights: ["Stay in Rooms/Tents", "All meals included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
+      highlights: ["Stay in Rooms/Tents", "Breakfast & Dinner included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
       extraActivities: ["Pickup & Drop (varies by location)", "Munnar sightseeing (varies by points)", "Additional vehicle options available"],
       popular: true,
       startTime: "Flexible",
