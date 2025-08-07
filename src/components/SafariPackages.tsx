@@ -52,8 +52,8 @@ const SafariPackages = () => {
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, breakfast & dinner, campfire, stay & safari adventures.",
       image: kolukkumalaiImage,
-      price: "₹3,250",
-      totalForSix: "₹19,500",
+      price: "₹4,533",
+      totalForSix: "₹27,198",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
       priceBreakdown: {
@@ -61,10 +61,11 @@ const SafariPackages = () => {
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
         chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
-        subtotal: "₹2,833","(Per head for 3D/2N)"}
+        subtotal: "₹2,083","(Per head for 3D/2N)"}
       },
       highlights: ["Stay in Rooms/Tents", "Breakfast & Dinner included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
-      extraActivities: ["Pickup & Drop (varies by location)", "Munnar sightseeing (varies by points)", "Additional vehicle options available"],
+      extraActivities: ["Pickup & Drop (price varies by location)", "Munnar sightseeing (price varies by points)", "Additional vehicle options available"],
+      price:"price will be depends on your need"
       popular: true,
       startTime: "Flexible",
       packageType: "complete"
