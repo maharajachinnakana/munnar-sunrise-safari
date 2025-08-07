@@ -11,12 +11,12 @@ const SafariPackages = () => {
     {
       id: 1,
       title: "Kolukkumalai Sunrise Safari",
-      description: "Witness the magical sunrise from the world's highest tea plantation at 7,900 feet above sea level.",
+      description: "Witness the magical sunrise from the world's highest tea plantation. Visit famous Lion Rock (shaped like a lion's head), Bose Peak trekking, and organic tea factory.",
       image: jeepImage,
       price: "₹3,000",
       duration: "4-5 hours",
       capacity: "6 persons",
-      highlights: ["Highest tea plantation", "360° mountain views", "Tea tasting", "Photo opportunities"],
+      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "Highest tea plantation", "360° mountain views", "Tea tasting"],
       popular: true,
       startTime: "3:30 AM"
     },
@@ -140,13 +140,24 @@ const SafariPackages = () => {
               </CardContent>
 
               <CardFooter className="pt-0">
-                <Button 
-                  variant={pkg.popular ? "hero" : "default"} 
-                  className="w-full font-semibold"
-                  size="lg"
-                >
-                  Book Now
-                </Button>
+                <div className="flex gap-2 w-full">
+                  <Button 
+                    variant={pkg.popular ? "hero" : "default"} 
+                    className="flex-1 font-semibold"
+                    size="lg"
+                    onClick={() => window.open(`https://wa.me/919446909285?text=Hi! I'm interested in ${pkg.title}. Please share more details.`, '_blank')}
+                  >
+                    WhatsApp
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="flex-1 font-semibold"
+                    size="lg"
+                    onClick={() => window.open('tel:+919446909285')}
+                  >
+                    Call
+                  </Button>
+                </div>
               </CardFooter>
             </Card>
           ))}

@@ -28,7 +28,7 @@ const BookingForm = () => {
   const { toast } = useToast();
 
   const packages = [
-    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari - ₹3,000", price: 3000 },
+    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari + Lion Rock + Tea Factory - ₹3,000", price: 3000 },
     { value: "chathuranga", label: "Chathuranga Para Safari - ₹2,500", price: 2500 },
     { value: "annakulam", label: "Annakulam Safari - ₹2,200", price: 2200 },
     { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹12,500", price: 12500 }
