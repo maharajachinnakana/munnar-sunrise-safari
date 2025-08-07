@@ -52,10 +52,21 @@ const SafariPackages = () => {
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, meals, transport, sightseeing & safari adventures.",
       image: kolukkumalaiImage,
-      price: "₹12,500",
+      price: "₹3,250",
+      totalForSix: "₹19,500",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
-      highlights: ["Stay in Rooms/Tents", "All meals included", "Pickup & Drop", "All safaris", "Munnar sightseeing", "Multiple vehicle options"],
+      priceBreakdown: {
+        accommodation: { price: "₹500", description: "Stay + Breakfast + Dinner" },
+        campfire: { price: "₹250", description: "Camp Fire Experience" },
+        kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
+        chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
+        annakulam: { price: "₹1,000", description: "Annakulam Safari" },
+        subtotal: "₹2,833",
+        extraCharges: { price: "₹417", description: "Service charges & coordination" }
+      },
+      highlights: ["Stay in Rooms/Tents", "All meals included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
+      extraActivities: ["Pickup & Drop (varies by location)", "Munnar sightseeing (varies by points)", "Additional vehicle options available"],
       popular: true,
       startTime: "Flexible",
       packageType: "complete"
@@ -139,6 +150,65 @@ const SafariPackages = () => {
                       </li>
                     ))}
                   </ul>
+                  
+                  {pkg.priceBreakdown && (
+                    <div className="text-xs mt-3 p-3 bg-muted/50 rounded space-y-2">
+                      <div className="font-semibold text-primary">Detailed Price Breakdown (Per Person):</div>
+                      <div className="space-y-1">
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.accommodation.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.accommodation.price}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.campfire.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.campfire.price}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.kolukkumalai.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.kolukkumalai.price}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.chathuranga.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.chathuranga.price}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.annakulam.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.annakulam.price}</span>
+                        </div>
+                        <div className="border-t pt-1 flex justify-between text-primary font-semibold">
+                          <span>Subtotal</span>
+                          <span>{pkg.priceBreakdown.subtotal}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>{pkg.priceBreakdown.extraCharges.description}</span>
+                          <span className="font-medium">{pkg.priceBreakdown.extraCharges.price}</span>
+                        </div>
+                        <div className="border-t pt-1 flex justify-between text-primary font-bold text-sm">
+                          <span>Total per person</span>
+                          <span>{pkg.price}</span>
+                        </div>
+                        <div className="flex justify-between text-primary font-bold">
+                          <span>Total for 6 persons</span>
+                          <span>{pkg.totalForSix}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {pkg.extraActivities && (
+                    <div className="text-xs mt-2 p-2 bg-accent/20 rounded">
+                      <div className="font-semibold text-accent-foreground mb-1">Extra Activities (Variable Pricing):</div>
+                      <ul className="space-y-1">
+                        {pkg.extraActivities.map((activity, idx) => (
+                          <li key={idx} className="flex items-center gap-1">
+                            <div className="w-1 h-1 bg-accent rounded-full" />
+                            <span className="text-accent-foreground">{activity}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
                   {pkg.pricePerJeep && (
                     <div className="text-xs text-muted-foreground mt-2 p-2 bg-muted/50 rounded">
                       <strong>Pricing:</strong> {pkg.pricePerJeep} per jeep (up to 6 persons) = {pkg.price} per person
