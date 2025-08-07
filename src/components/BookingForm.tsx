@@ -28,10 +28,10 @@ const BookingForm = () => {
   const { toast } = useToast();
 
   const packages = [
-    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari + Lion Rock + Tea Factory - ₹3,000", price: 3000 },
-    { value: "chathuranga", label: "Chathuranga Para Safari - ₹2,500", price: 2500 },
-    { value: "annakulam", label: "Annakulam Safari - ₹2,200", price: 2200 },
-    { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹12,500", price: 12500 }
+    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari + Lion Rock + Tea Factory - ₹500 per head", price: 500, jeepPrice: 3000 },
+    { value: "chathuranga", label: "Chathuranga Para Safari - ₹417 per head", price: 417, jeepPrice: 2500 },
+    { value: "annakulam", label: "Annakulam Safari (Elephant area + Waterfall) - ₹367 per head", price: 367, jeepPrice: 2200 },
+    { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹12,500 per person", price: 12500 }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -249,8 +249,13 @@ const BookingForm = () => {
               {/* Price Summary */}
               {selectedPkg && guests && (
                 <div className="bg-muted p-4 rounded-lg space-y-2 animate-slide-up">
+                  {selectedPkg.jeepPrice && (
+                    <div className="text-sm text-muted-foreground mb-2 p-2 bg-background/50 rounded border">
+                      <strong>Safari Pricing:</strong> ₹{selectedPkg.jeepPrice.toLocaleString()} per jeep (up to 6 persons) = ₹{selectedPkg.price} per person
+                    </div>
+                  )}
                   <div className="flex justify-between items-center">
-                    <span>Package Price per person:</span>
+                    <span>Price per person:</span>
                     <span className="font-semibold">₹{selectedPkg.price.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center">

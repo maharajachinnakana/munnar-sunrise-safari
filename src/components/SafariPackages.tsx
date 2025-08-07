@@ -2,9 +2,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Star } from "lucide-react";
-import jeepImage from "@/assets/jeep-safari.jpg";
-import chathurangaImage from "@/assets/chathuranga-para.jpg";
-import annakulamImage from "@/assets/annakulam.jpg";
+import kolukkumalaiImage from "@/assets/kolukkumalai-original.jpg";
+import chathurangaImage from "@/assets/chathuranga-original.jpg";
+import annakulamImage from "@/assets/annakulam-original.jpg";
 
 const SafariPackages = () => {
   const packages = [
@@ -12,8 +12,9 @@ const SafariPackages = () => {
       id: 1,
       title: "Kolukkumalai Sunrise Safari",
       description: "Witness the magical sunrise from the world's highest tea plantation. Visit famous Lion Rock (shaped like a lion's head), Bose Peak trekking, and organic tea factory.",
-      image: jeepImage,
-      price: "₹3,000",
+      image: kolukkumalaiImage,
+      price: "₹500",
+      pricePerJeep: "₹3,000",
       duration: "4-5 hours",
       capacity: "6 persons",
       highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "Highest tea plantation", "360° mountain views", "Tea tasting"],
@@ -25,7 +26,8 @@ const SafariPackages = () => {
       title: "Chathuranga Para Safari",
       description: "Explore the stunning viewpoints and dramatic cliffs with panoramic valley views.",
       image: chathurangaImage,
-      price: "₹2,500",
+      price: "₹417",
+      pricePerJeep: "₹2,500",
       duration: "3-4 hours",
       capacity: "6 persons",
       highlights: ["Scenic viewpoints", "Valley panoramas", "Wildlife spotting", "Adventure trails"],
@@ -35,12 +37,13 @@ const SafariPackages = () => {
     {
       id: 3,
       title: "Annakulam Safari",
-      description: "Journey through pristine tea estates and serene mountain landscapes.",
+      description: "Journey through pristine tea estates and serene mountain landscapes with wildlife spotting.",
       image: annakulamImage,
-      price: "₹2,200",
+      price: "₹367",
+      pricePerJeep: "₹2,200",
       duration: "3 hours",
       capacity: "6 persons",
-      highlights: ["Tea estate tour", "Mountain trails", "Local culture", "Nature walks"],
+      highlights: ["Elephant crossing area", "Viripara waterfall", "Tea plantations", "Wildlife spotting", "Mountain trails", "Nature walks"],
       popular: false,
       startTime: "10:00 AM"
     },
@@ -48,7 +51,7 @@ const SafariPackages = () => {
       id: 4,
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, meals, transport, sightseeing & safari adventures.",
-      image: jeepImage,
+      image: kolukkumalaiImage,
       price: "₹12,500",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
@@ -136,6 +139,11 @@ const SafariPackages = () => {
                       </li>
                     ))}
                   </ul>
+                  {pkg.pricePerJeep && (
+                    <div className="text-xs text-muted-foreground mt-2 p-2 bg-muted/50 rounded">
+                      <strong>Pricing:</strong> {pkg.pricePerJeep} per jeep (up to 6 persons) = {pkg.price} per person
+                    </div>
+                  )}
                 </div>
               </CardContent>
 
