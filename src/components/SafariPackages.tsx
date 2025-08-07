@@ -17,7 +17,7 @@ const SafariPackages = () => {
       pricePerJeep: "₹3,000",
       duration: "4-5 hours",
       capacity: "6 persons",
-      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "Highest tea plantation", "360° mountain views", "Tea tasting"],
+      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "world Highest tea plantation", "360° mountain views", "Tea tasting"],
       popular: true,
       startTime: "3:30 AM"
     },
@@ -30,7 +30,7 @@ const SafariPackages = () => {
       pricePerJeep: "₹3,500",
       duration: "3-4 hours",
       capacity: "6 persons",
-      highlights: ["Scenic viewpoints", "Valley panoramas", "Wildlife spotting", "Adventure trails"],
+      highlights: ["Hidden Waterfalls","Scenic viewpoints", "Valley panoramas", "Wildlife spotting", "Adventure trails"],
       popular: false,
       startTime: "9:00 AM"
     },
