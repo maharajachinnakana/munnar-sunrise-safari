@@ -65,7 +65,7 @@ const SafariPackages = () => {
       },
       highlights: ["Stay in Rooms/Tents", "Breakfast & Dinner included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
       extraActivities: ["Pickup & Drop (price varies by location)", "Munnar sightseeing (price varies by points)", "Additional vehicle options available"],
-      price:"price will be depends on your need"
+      price:"price will be depends on your need",
       popular: true,
       startTime: "Flexible",
       packageType: "complete"
