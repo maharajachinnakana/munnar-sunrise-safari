@@ -59,7 +59,7 @@ const SafariPackages = () => {
       priceBreakdown: {
         accommodation: {
           price: "₹750 x 3 = ₹2,250",
-          description: "Stay + Breakfast + Dinner (Per day per head) = ₹2,250 for 3D/2N",
+          description: "Stay + Breakfast + Dinner - ₹750 per head per day (3D/2N = ₹2,250)",
         },
         campfire: { price: "₹250", description: "Camp fire (one time)" },
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
