@@ -52,20 +52,20 @@ const SafariPackages = () => {
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, breakfast & dinner, campfire, stay & safari adventures.",
       image: kolukkumalaiImage,
-      price: "₹4,583",
-      totalForSix: "₹27,498",
+      price: "₹4,333",
+      totalForSix: "₹25,998",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
       priceBreakdown: {
         accommodation: {
           price: "₹750 x 3 = ₹2,250",
-          description: "Stay + Breakfast + Dinner - ₹750 per head per day (3D/2N = ₹2,250)",
+          description: "Stay + Breakfast + Dinner + Campfire - ₹750 per head per day (3D/2N = ₹2,250)",
         },
-        campfire: { price: "₹250", description: "Camp fire (one time)" },
+        
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
         chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
-        subtotal: "₹4,583 per head for 3D/2N",
+        subtotal: "₹4,333 per head for 3D/2N",
         extraCharges: {
           price: "Variable",
           description: "Pickup & Drop and Sightseeing (amount varies by pickup/drop points and sightseeing points)",
@@ -164,10 +164,6 @@ const SafariPackages = () => {
                         <div className="flex justify-between">
                           <span>{pkg.priceBreakdown.accommodation.description}</span>
                           <span className="font-medium">{pkg.priceBreakdown.accommodation.price}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>{pkg.priceBreakdown.campfire.description}</span>
-                          <span className="font-medium">{pkg.priceBreakdown.campfire.price}</span>
                         </div>
                         <div className="flex justify-between">
                           <span>{pkg.priceBreakdown.kolukkumalai.description}</span>
