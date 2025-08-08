@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Users, Star } from "lucide-react";
+import { Clock, Users, Star } from "lucide-react";
 import kolukkumalaiImage from "@/assets/kolukkumalai-original.jpg";
 import chathurangaImage from "@/assets/chathuranga-original.jpg";
 import annakulamImage from "@/assets/annakulam-original.jpg";
@@ -52,20 +52,27 @@ const SafariPackages = () => {
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, breakfast & dinner, campfire, stay & safari adventures.",
       image: kolukkumalaiImage,
-      price: "₹4,533",
-      totalForSix: "₹27,198",
+      price: "₹4,583",
+      totalForSix: "₹27,498",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
       priceBreakdown: {
-        accommodation: { price: "₹750", description: "Stay + Breakfast + Dinner + Camp fire (Per day Per head) = 2250 for total 3D/2N" },
+        accommodation: {
+          price: "₹750 x 3 = ₹2,250",
+          description: "Stay + Breakfast + Dinner (Per day per head) = ₹2,250 for 3D/2N",
+        },
+        campfire: { price: "₹250", description: "Camp fire (one time)" },
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
         chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
-        subtotal: "₹2,083 (Per head for 3D/2N)"}
+        subtotal: "₹4,583 per head for 3D/2N",
+        extraCharges: {
+          price: "Variable",
+          description: "Pickup & Drop and Sightseeing (amount varies by pickup/drop points and sightseeing points)",
+        },
       },
       highlights: ["Stay in Rooms/Tents", "Breakfast & Dinner included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
       extraActivities: ["Pickup & Drop (price varies by location)", "Munnar sightseeing (price varies by points)", "Additional vehicle options available"],
-      price:"price will be depends on your need",
       popular: true,
       startTime: "Flexible",
       packageType: "complete"
@@ -233,6 +240,14 @@ const SafariPackages = () => {
                     onClick={() => window.open('tel:+919446909285')}
                   >
                     Call
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="flex-1 font-semibold"
+                    size="lg"
+                    onClick={() => (window.location.href = 'mailto:muthooztours@gmail.com')}
+                  >
+                    Email
                   </Button>
                 </div>
               </CardFooter>

@@ -40,7 +40,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-sunrise mt-0.5" />
                 <div>
-                  <p className="font-medium">info@munnarsafari.com</p>
+                  <p className="font-medium">muthooztours@gmail.com</p>
                   <p className="text-sm text-mountain-foreground/80">Quick Response</p>
                 </div>
               </div>
@@ -68,13 +68,13 @@ const Footer = () => {
                 <p className="font-medium group-hover:text-sunrise transition-colors">
                   Chathuranga Para
                 </p>
-                <p className="text-sm text-mountain-foreground/80">₹2,500 per jeep</p>
+                <p className="text-sm text-mountain-foreground/80">₹3,500 per jeep</p>
               </div>
               <div className="group cursor-pointer">
                 <p className="font-medium group-hover:text-sunrise transition-colors">
                   Annakulam Safari
                 </p>
-                <p className="text-sm text-mountain-foreground/80">₹2,200 per jeep</p>
+                <p className="text-sm text-mountain-foreground/80">₹6,000 per jeep</p>
               </div>
             </div>
           </div>
