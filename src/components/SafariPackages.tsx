@@ -58,7 +58,7 @@ const SafariPackages = () => {
       capacity: "6 persons",
       priceBreakdown: {
         accommodation: {
-          price: "₹750 x 3 = ₹2,250",
+          price: "₹750",
           description: "Stay+Breakfast+Dinner+campfire 750 Per Day (3D/2N=2250)",
         },
         
@@ -80,7 +80,7 @@ const SafariPackages = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section id="packages" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -110,7 +110,9 @@ const SafariPackages = () => {
               <div className="relative overflow-hidden">
                 <img 
                   src={pkg.image} 
-                  alt={pkg.title}
+                  alt={`${pkg.title} - Munnar jeep safari package photo`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
