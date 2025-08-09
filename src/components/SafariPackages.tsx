@@ -181,10 +181,12 @@ const SafariPackages = () => {
                           <span>Subtotal</span>
                           <span>{pkg.priceBreakdown.subtotal}</span>
                         </div>
-                        <div className="flex justify-between">
-                          <span>{pkg.priceBreakdown.extraCharges.description}</span>
-                          <span className="font-medium">{pkg.priceBreakdown.extraCharges.price}</span>
-                        </div>
+                        {(pkg as any)?.priceBreakdown?.extraCharges?.description && (pkg as any)?.priceBreakdown?.extraCharges?.price && (
+                          <div className="flex justify-between">
+                            <span>{(pkg as any).priceBreakdown.extraCharges.description}</span>
+                            <span className="font-medium">{(pkg as any).priceBreakdown.extraCharges.price}</span>
+                          </div>
+                        )}
                         <div className="border-t pt-1 flex justify-between text-primary font-bold text-sm">
                           <span>Total per person</span>
                           <span>{pkg.price}</span>
