@@ -237,14 +237,6 @@ const SafariPackages = () => {
                   >
                     Call
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 font-semibold"
-                    size="lg"
-                    onClick={() => (window.location.href = 'mailto:muthooztours@gmail.com')}
-                  >
-                    Email
-                  </Button>
                 </div>
               </CardFooter>
             </Card>
