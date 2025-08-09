@@ -59,7 +59,7 @@ const SafariPackages = () => {
       priceBreakdown: {
         accommodation: {
           price: "₹750",
-          description: "Stay + Breakfast + Dinner + campfire Per Day (3D/2N=2250)",
+          description: "Stay+Breakfast+Dinner+campfire Per Day (3D/2N=2250)",
         },
         
         kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
