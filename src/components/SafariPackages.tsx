@@ -67,8 +67,6 @@ const SafariPackages = () => {
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
         subtotal: "₹4,333 per head for 3D/2N",
         extraCharges: {
-          price: "Variable",
-          description: "Pickup & Drop and Sightseeing (amount varies by pickup/drop points and sightseeing points)",
         },
       },
       highlights: ["Stay in Rooms/Tents", "Breakfast & Dinner included", "3 Types of Safari", "Camp Fire", "Professional coordination"],
