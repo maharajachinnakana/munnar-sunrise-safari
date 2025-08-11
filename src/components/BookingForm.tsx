@@ -69,7 +69,7 @@ const BookingForm = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Book Your <span className="text-primary">Adventure</span>
+            Book Your Munnar <span className="text-primary">Adventure</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Reserve your spot for an unforgettable offroad safari experience in Munnar
@@ -78,7 +78,7 @@ const BookingForm = () => {
 
         <Card className="shadow-premium animate-scale-in">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold">Safari Booking</CardTitle>
+            <h3 className="text-2xl font-bold">Safari Booking Form</h3>
             <CardDescription>
               Fill in your details and we'll confirm your adventure within 24 hours
             </CardDescription>

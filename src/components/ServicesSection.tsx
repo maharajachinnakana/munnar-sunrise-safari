@@ -55,9 +55,9 @@ const ServicesSection = () => {
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
                   {service.title}
-                </CardTitle>
+                </h3>
                 <CardDescription className="text-base">
                   {service.description}
                 </CardDescription>

@@ -147,7 +147,7 @@ const SafariPackages = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-sm">Highlights:</h4>
+                  <h5 className="font-semibold text-sm">Package Highlights:</h5>
                   <ul className="grid grid-cols-2 gap-1 text-sm text-muted-foreground">
                     {pkg.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-center gap-1">
@@ -159,7 +159,7 @@ const SafariPackages = () => {
                   
                   {pkg.priceBreakdown && (
                     <div className="text-xs mt-3 p-3 bg-muted/50 rounded space-y-2">
-                      <div className="font-semibold text-primary">Detailed Price Breakdown (Per Person):</div>
+                      <h6 className="font-semibold text-primary">Detailed Price Breakdown (Per Person):</h6>
                       <div className="space-y-1">
                         <div className="flex justify-between">
                           <span>{pkg.priceBreakdown.accommodation.description}</span>
@@ -201,7 +201,7 @@ const SafariPackages = () => {
 
                   {pkg.extraActivities && (
                     <div className="text-xs mt-2 p-2 bg-accent/20 rounded">
-                      <div className="font-semibold text-accent-foreground mb-1">Extra Activities (Variable Pricing):</div>
+                      <h6 className="font-semibold text-accent-foreground mb-1">Extra Activities (Variable Pricing):</h6>
                       <ul className="space-y-1">
                         {pkg.extraActivities.map((activity, idx) => (
                           <li key={idx} className="flex items-center gap-1">

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-sunrise">Munnar Safari</h3>
+            <h3 className="text-2xl font-bold text-sunrise">Munnar Safari Adventures</h3>
             <p className="text-mountain-foreground/80 leading-relaxed">
               Experience the magic of Munnar with our premium offroad jeep safaris. 
               Adventure awaits in every trail.
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Safari Packages */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-sunrise">Our Safaris</h4>
+            <h4 className="text-lg font-semibold text-sunrise">Our Safari Packages</h4>
             <div className="space-y-2">
               <div className="group cursor-pointer">
                 <p className="font-medium group-hover:text-sunrise transition-colors">
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Operating Hours */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-sunrise">Operating Hours</h4>
+            <h4 className="text-lg font-semibold text-sunrise">Safari Operating Hours</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-sunrise" />
