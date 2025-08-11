@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience the breathtaking sunrise at Kolukkumalai, the world's highest tea plantation, with our thrilling offroad jeep adventures.
+            Experience the breathtaking sunrise at Kolukkumalai, the world's highest organic tea plantation, with our thrilling Western Ghats jeep safari adventures and panoramic mountain views.
           </p>
           
           {/* Key Features */}

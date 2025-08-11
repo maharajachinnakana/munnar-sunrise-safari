@@ -11,39 +11,39 @@ const SafariPackages = () => {
     {
       id: 1,
       title: "Kolukkumalai Sunrise Safari",
-      description: "Witness the magical sunrise from the world's highest tea plantation. Visit famous Lion Rock (shaped like a lion's head), Bose Peak trekking, and organic tea factory.",
+      description: "Witness the magical sunrise from the world's highest organic tea plantation. Visit famous Lion Rock View Point (shaped like a lion's head), experience Western Ghats sunrise safari, Bose Peak trekking, and organic tea factory tour.",
       image: kolukkumalaiImage,
       price: "₹500",
       pricePerJeep: "₹3,000",
       duration: "4-5 hours",
       capacity: "6 persons",
-      highlights: ["Famous Lion Rock viewpoint", "Bose Peak trekking (+₹700)", "Organic tea factory visit", "World Highest tea plantation", "360° mountain views", "Tea tasting"],
+      highlights: ["Famous Lion Rock View Point Munnar", "Bose Peak trekking (+₹700)", "World's Highest Organic Tea Plantation", "Kolukkumalai Tea Estate Tour", "Panoramic Mountain Views Munnar", "Tea tasting experience"],
       popular: true,
       startTime: "3:30 AM"
     },
     {
       id: 2,
       title: "Chathuranga Para Safari",
-      description: "Explore the stunning viewpoints and dramatic cliffs with panoramic valley views.",
+      description: "Explore the stunning viewpoints and dramatic cliffs with panoramic valley views. Experience offroad jeep ride through Western Ghats terrain.",
       image: chathurangaImage,
       price: "₹583",
       pricePerJeep: "₹3,500",
       duration: "3-4 hours",
       capacity: "6 persons",
-      highlights: ["Hidden Waterfalls","Scenic viewpoints", "Valley panoramas", "Wildlife spotting", "Adventure trails"],
+      highlights: ["Hidden Waterfalls","Scenic viewpoints", "Panoramic Mountain Views Munnar", "Wildlife Jeep Safari Munnar", "Adventure trails"],
       popular: false,
       startTime: "9:00 AM"
     },
     {
       id: 3,
       title: "Annakulam Safari",
-      description: "Journey through pristine tea estates and serene mountain landscapes with wildlife spotting.",
+      description: "Journey through pristine tea estates and serene mountain landscapes with wildlife spotting. Experience thrilling offroad jeep ride to tea plantation.",
       image: annakulamImage,
       price: "₹1,000",
       pricePerJeep: "₹6,000",
       duration: "3 hours",
       capacity: "6 persons",
-      highlights: ["Elephant crossing area", "Viripara waterfall", "Tea plantations", "Wildlife spotting", "Mountain trails", "Nature walks"],
+      highlights: ["Elephant crossing area", "Viripara waterfall", "Tea plantations", "Wildlife Jeep Safari Munnar", "Mountain trails", "Nature walks"],
       popular: false,
       startTime: "10:00 AM"
     },
@@ -108,7 +108,7 @@ const SafariPackages = () => {
               <div className="relative overflow-hidden">
                 <img 
                   src={pkg.image} 
-                  alt={`${pkg.title} - Munnar jeep safari package photo`}
+                  alt={pkg.id === 1 ? "Kolukkumalai Jeep Safari Munnar sunrise view from world's highest organic tea plantation with Lion Rock viewpoint" : pkg.id === 2 ? "Chathuranga Para offroad jeep safari with panoramic mountain views in Western Ghats Munnar" : pkg.id === 3 ? "Annakulam wildlife jeep safari through tea plantation with mountain trails in Munnar" : `${pkg.title} - Best jeep safari in Munnar offroad adventure package`}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
