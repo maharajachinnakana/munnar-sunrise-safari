@@ -1,13 +1,77 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star } from "lucide-react";
-// Using uploaded image for Kolukkumalai
-const kolukkumalaiImage = "/lovable-uploads/82dbee00-8642-4223-ba66-b389597e2093.png";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Clock, Users, Star, Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
+// Using uploaded image for Kolukkumalai - changed to sunset image
+const kolukkumalaiImage = "/lovable-uploads/64c01a9f-740e-49a7-8fc5-e49aff0f9e8a.png";
 import chathurangaImage from "@/assets/chathuranga-original.jpg";
 import annakulamImage from "@/assets/annakulam-original.jpg";
 
 const SafariPackages = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
+  const galleryImages = [
+    {
+      src: "/lovable-uploads/82dbee00-8642-4223-ba66-b389597e2093.png",
+      alt: "Kolukkumalai sunrise view with person silhouette - Best jeep safari in Munnar for sunrise",
+      title: "Kolukkumalai Sunrise Safari",
+      description: "Witness the magical sunrise from world's highest organic tea plantation"
+    },
+    {
+      src: "/lovable-uploads/951738de-e276-4b92-a864-6d376ae013d2.png", 
+      alt: "Panoramic mountain views Munnar above clouds at sunrise",
+      title: "Mountain Views Above Clouds",
+      description: "Breathtaking panoramic mountain views from Kolukkumalai"
+    },
+    {
+      src: "/lovable-uploads/7d8c05c0-e1c8-4f78-9894-21ec8a2dede1.png",
+      alt: "Western Ghats mountain vista with rolling hills and tea plantations",
+      title: "Western Ghats Vista", 
+      description: "Stunning views of Western Ghats mountain ranges"
+    },
+    {
+      src: "/lovable-uploads/31106db0-d231-475d-b353-8c56f4a43352.png",
+      alt: "Misty mountain peaks emerging from clouds - Munnar offroad jeep ride views",
+      title: "Misty Mountain Peaks",
+      description: "Dramatic mountain peaks emerging from morning mist"
+    },
+    {
+      src: "/lovable-uploads/34462f34-ac31-4793-b816-d47cb8944a84.png",
+      alt: "Hand holding tea leaves with Lion Rock view point Munnar in background",
+      title: "Tea Plantation Experience",
+      description: "Fresh tea leaves from world's highest organic tea plantation"
+    },
+    {
+      src: "/lovable-uploads/90e46b22-3cba-4ee6-bc24-d9141f2c28bd.png",
+      alt: "Expansive tea plantation landscape with mountain trails Munnar",
+      title: "Tea Plantation Landscape", 
+      description: "Endless tea plantation landscapes of Munnar hills"
+    },
+    {
+      src: "/lovable-uploads/64c01a9f-740e-49a7-8fc5-e49aff0f9e8a.png",
+      alt: "Kolukkumalai sunset safari view with colorful sky over mountain silhouettes",
+      title: "Kolukkumalai Sunset",
+      description: "Spectacular sunset views from Kolukkumalai peaks"
+    },
+    {
+      src: "/lovable-uploads/4cc7106f-4e75-4821-9c86-e59c93238983.png",
+      alt: "Mountain trail landscape view during wildlife jeep safari Munnar experience",
+      title: "Mountain Trail Views",
+      description: "Scenic mountain trails during safari adventures"
+    }
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
   const packages = [
     {
       id: 1,
@@ -224,9 +288,73 @@ const SafariPackages = () => {
 
               <CardFooter className="pt-0">
                 <div className="flex gap-2 w-full">
+                  {pkg.id === 1 && (
+                    <Dialog open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="flex-1 font-semibold" size="lg">
+                          <Camera className="w-4 h-4 mr-2" />
+                          View Gallery
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full h-[90vh] p-0">
+                        <div className="relative h-full bg-black">
+                          <button
+                            onClick={() => setIsGalleryOpen(false)}
+                            className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                          >
+                            <X className="w-6 h-6" />
+                          </button>
+                          
+                          <div className="relative h-full flex items-center justify-center">
+                            <img
+                              src={galleryImages[currentImageIndex].src}
+                              alt={galleryImages[currentImageIndex].alt}
+                              className="max-h-full max-w-full object-contain"
+                              loading="lazy"
+                            />
+                            
+                            <button
+                              onClick={prevImage}
+                              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
+                            >
+                              <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            
+                            <button
+                              onClick={nextImage}
+                              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
+                            >
+                              <ChevronRight className="w-6 h-6" />
+                            </button>
+                          </div>
+                          
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                            <div className="text-center text-white">
+                              <h3 className="text-xl font-bold mb-2">{galleryImages[currentImageIndex].title}</h3>
+                              <p className="text-gray-300 mb-4">{galleryImages[currentImageIndex].description}</p>
+                              <div className="flex justify-center gap-2">
+                                {galleryImages.map((_, index) => (
+                                  <button
+                                    key={index}
+                                    onClick={() => setCurrentImageIndex(index)}
+                                    className={`w-2 h-2 rounded-full transition-colors ${
+                                      index === currentImageIndex ? 'bg-white' : 'bg-white/40'
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                              <Badge variant="secondary" className="mt-4">
+                                {currentImageIndex + 1} of {galleryImages.length}
+                              </Badge>
+                            </div>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  )}
                   <Button 
                     variant={pkg.popular ? "hero" : "default"} 
-                    className="flex-1 font-semibold"
+                    className={`${pkg.id === 1 ? 'flex-1' : 'flex-1'} font-semibold`}
                     size="lg"
                     onClick={() => window.open(`https://wa.me/919446909285?text=Hi! I'm interested in ${pkg.title}. Please share more details.`, '_blank')}
                   >
