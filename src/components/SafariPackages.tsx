@@ -2,7 +2,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, Star } from "lucide-react";
-import kolukkumalaiImage from "@/assets/kolukkumalai-original.jpg";
+// Using uploaded image for Kolukkumalai
+const kolukkumalaiImage = "/lovable-uploads/82dbee00-8642-4223-ba66-b389597e2093.png";
 import chathurangaImage from "@/assets/chathuranga-original.jpg";
 import annakulamImage from "@/assets/annakulam-original.jpg";
 
