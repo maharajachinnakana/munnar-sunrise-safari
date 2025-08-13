@@ -179,6 +179,77 @@ const SafariPackages = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                
+                {/* Gallery Button - positioned in top-right corner of main photo */}
+                {pkg.id === 1 && (
+                  <Dialog open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>
+                    <DialogTrigger asChild>
+                      <Button 
+                        variant="secondary" 
+                        size="sm"
+                        className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 transition-smooth"
+                      >
+                        <Camera className="w-4 h-4 mr-1" />
+                        Gallery
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl w-full h-[90vh] p-0">
+                      <div className="relative h-full bg-black">
+                        <button
+                          onClick={() => setIsGalleryOpen(false)}
+                          className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                        >
+                          <X className="w-6 h-6" />
+                        </button>
+                        
+                        <div className="relative h-full flex items-center justify-center">
+                          <img
+                            src={galleryImages[currentImageIndex].src}
+                            alt={galleryImages[currentImageIndex].alt}
+                            className="max-h-full max-w-full object-contain"
+                            loading="lazy"
+                          />
+                          
+                          <button
+                            onClick={prevImage}
+                            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
+                          >
+                            <ChevronLeft className="w-6 h-6" />
+                          </button>
+                          
+                          <button
+                            onClick={nextImage}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
+                          >
+                            <ChevronRight className="w-6 h-6" />
+                          </button>
+                        </div>
+                        
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                          <div className="text-center text-white">
+                            <h3 className="text-xl font-bold mb-2">{galleryImages[currentImageIndex].title}</h3>
+                            <p className="text-gray-300 mb-4">{galleryImages[currentImageIndex].description}</p>
+                            <div className="flex justify-center gap-2">
+                              {galleryImages.map((_, index) => (
+                                <button
+                                  key={index}
+                                  onClick={() => setCurrentImageIndex(index)}
+                                  className={`w-2 h-2 rounded-full transition-colors ${
+                                    index === currentImageIndex ? 'bg-white' : 'bg-white/40'
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                            <Badge variant="secondary" className="mt-4">
+                              {currentImageIndex + 1} of {galleryImages.length}
+                            </Badge>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                )}
+                
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="flex items-center gap-2 text-sm">
                     <Clock className="w-4 h-4" />
@@ -288,73 +359,9 @@ const SafariPackages = () => {
 
               <CardFooter className="pt-0">
                 <div className="flex gap-2 w-full">
-                  {pkg.id === 1 && (
-                    <Dialog open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="flex-1 font-semibold" size="lg">
-                          <Camera className="w-4 h-4 mr-2" />
-                          View Gallery
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-4xl w-full h-[90vh] p-0">
-                        <div className="relative h-full bg-black">
-                          <button
-                            onClick={() => setIsGalleryOpen(false)}
-                            className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-                          >
-                            <X className="w-6 h-6" />
-                          </button>
-                          
-                          <div className="relative h-full flex items-center justify-center">
-                            <img
-                              src={galleryImages[currentImageIndex].src}
-                              alt={galleryImages[currentImageIndex].alt}
-                              className="max-h-full max-w-full object-contain"
-                              loading="lazy"
-                            />
-                            
-                            <button
-                              onClick={prevImage}
-                              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
-                            >
-                              <ChevronLeft className="w-6 h-6" />
-                            </button>
-                            
-                            <button
-                              onClick={nextImage}
-                              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors"
-                            >
-                              <ChevronRight className="w-6 h-6" />
-                            </button>
-                          </div>
-                          
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                            <div className="text-center text-white">
-                              <h3 className="text-xl font-bold mb-2">{galleryImages[currentImageIndex].title}</h3>
-                              <p className="text-gray-300 mb-4">{galleryImages[currentImageIndex].description}</p>
-                              <div className="flex justify-center gap-2">
-                                {galleryImages.map((_, index) => (
-                                  <button
-                                    key={index}
-                                    onClick={() => setCurrentImageIndex(index)}
-                                    className={`w-2 h-2 rounded-full transition-colors ${
-                                      index === currentImageIndex ? 'bg-white' : 'bg-white/40'
-                                    }`}
-                                  />
-                                ))}
-                              </div>
-                              <Badge variant="secondary" className="mt-4">
-                                {currentImageIndex + 1} of {galleryImages.length}
-                              </Badge>
-                            </div>
-                          </div>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-                  )}
                   <Button 
                     variant={pkg.popular ? "hero" : "default"} 
-                    className={`${pkg.id === 1 ? 'flex-1' : 'flex-1'} font-semibold`}
+                    className="flex-1 font-semibold"
                     size="lg"
                     onClick={() => window.open(`https://wa.me/919446909285?text=Hi! I'm interested in ${pkg.title}. Please share more details.`, '_blank')}
                   >
