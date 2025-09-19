@@ -180,14 +180,14 @@ const SafariPackages = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 
-                {/* Gallery Button - positioned in top-right corner of main photo */}
+                {/* Gallery Button - positioned in bottom-right corner of main photo */}
                 {pkg.id === 1 && (
                   <Dialog open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>
                     <DialogTrigger asChild>
                       <Button 
                         variant="secondary" 
                         size="sm"
-                        className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 transition-smooth"
+                        className="absolute bottom-3 right-3 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 transition-smooth"
                       >
                         <Camera className="w-4 h-4 mr-1" />
                         Gallery
