@@ -15,52 +15,58 @@ const SafariPackages = () => {
 
   const galleryImages = [
     {
-      src: "/lovable-uploads/82dbee00-8642-4223-ba66-b389597e2093.png",
-      alt: "Kolukkumalai sunrise view with person silhouette - Best jeep safari in Munnar for sunrise",
-      title: "Kolukkumalai Sunrise Safari",
-      description: "Witness the magical sunrise from world's highest organic tea plantation"
+      src: "/lovable-uploads/kolukkumalai-sunset-valley.jpg",
+      alt: "Kolukkumalai jeep safari sunset view with tea plantation valleys Western Ghats Munnar",
+      title: "Kolukkumalai Sunset Valley",
+      description: "Breathtaking sunset over tea plantation valleys during jeep safari"
     },
     {
-      src: "/lovable-uploads/951738de-e276-4b92-a864-6d376ae013d2.png", 
-      alt: "Panoramic mountain views Munnar above clouds at sunrise",
-      title: "Mountain Views Above Clouds",
-      description: "Breathtaking panoramic mountain views from Kolukkumalai"
+      src: "/lovable-uploads/kolukkumalai-jeep-safari-sunrise.jpg",
+      alt: "Kolukkumalai sunrise jeep safari tour with 4x4 vehicle mountain view Munnar offroad adventure",
+      title: "Sunrise Jeep Safari Experience",
+      description: "Offroad jeep safari to witness magical Kolukkumalai sunrise"
     },
     {
-      src: "/lovable-uploads/7d8c05c0-e1c8-4f78-9894-21ec8a2dede1.png",
-      alt: "Western Ghats mountain vista with rolling hills and tea plantations",
-      title: "Western Ghats Vista", 
-      description: "Stunning views of Western Ghats mountain ranges"
+      src: "/lovable-uploads/kolukkumalai-sunrise-viewpoint.jpg",
+      alt: "Kolukkumalai sunrise viewpoint Munnar tourists watching dawn Western Ghats jeep safari destination",
+      title: "Kolukkumalai Viewpoint Sunrise",
+      description: "Tourists enjoying spectacular sunrise from Kolukkumalai viewpoint"
     },
     {
-      src: "/lovable-uploads/31106db0-d231-475d-b353-8c56f4a43352.png",
-      alt: "Misty mountain peaks emerging from clouds - Munnar offroad jeep ride views",
-      title: "Misty Mountain Peaks",
-      description: "Dramatic mountain peaks emerging from morning mist"
+      src: "/lovable-uploads/kolukkumalai-golden-hour-safari.jpg",
+      alt: "Kolukkumalai golden hour mountain safari Munnar jeep tour dramatic sunrise Western Ghats",
+      title: "Golden Hour Mountain Safari",
+      description: "Golden hour views during early morning Kolukkumalai jeep safari"
     },
     {
-      src: "/lovable-uploads/34462f34-ac31-4793-b816-d47cb8944a84.png",
-      alt: "Hand holding tea leaves with Lion Rock view point Munnar in background",
-      title: "Tea Plantation Experience",
-      description: "Fresh tea leaves from world's highest organic tea plantation"
+      src: "/lovable-uploads/kolukkumalai-photographer-sunrise.jpg",
+      alt: "Kolukkumalai sunrise photography jeep safari Munnar photographers capturing dawn mountain views",
+      title: "Sunrise Photography Safari",
+      description: "Perfect photography opportunities during Kolukkumalai sunrise safari"
     },
     {
-      src: "/lovable-uploads/90e46b22-3cba-4ee6-bc24-d9141f2c28bd.png",
-      alt: "Expansive tea plantation landscape with mountain trails Munnar",
-      title: "Tea Plantation Landscape", 
-      description: "Endless tea plantation landscapes of Munnar hills"
+      src: "/lovable-uploads/kolukkumalai-tea-plantation-sunrise.jpg",
+      alt: "Kolukkumalai organic tea plantation sunrise jeep safari Munnar world highest tea estate Western Ghats",
+      title: "Tea Plantation at Dawn",
+      description: "World's highest organic tea plantation during golden sunrise"
     },
     {
-      src: "/lovable-uploads/64c01a9f-740e-49a7-8fc5-e49aff0f9e8a.png",
-      alt: "Kolukkumalai sunset safari view with colorful sky over mountain silhouettes",
-      title: "Kolukkumalai Sunset",
-      description: "Spectacular sunset views from Kolukkumalai peaks"
+      src: "/lovable-uploads/kolukkumalai-dramatic-sunrise.jpg",
+      alt: "Kolukkumalai dramatic sunrise clouds jeep safari Munnar offroad adventure Western Ghats peaks",
+      title: "Dramatic Sunrise Above Clouds",
+      description: "Stunning sunrise with dramatic cloud formations from Kolukkumalai"
     },
     {
-      src: "/lovable-uploads/4cc7106f-4e75-4821-9c86-e59c93238983.png",
-      alt: "Mountain trail landscape view during wildlife jeep safari Munnar experience",
-      title: "Mountain Trail Views",
-      description: "Scenic mountain trails during safari adventures"
+      src: "/lovable-uploads/kolukkumalai-mountain-peak-clouds.jpg",
+      alt: "Kolukkumalai mountain peak clouds jeep safari Munnar highest viewpoint Western Ghats trekking",
+      title: "Mountain Peak Above Clouds",
+      description: "Majestic mountain peaks rising above cloud sea at Kolukkumalai"
+    },
+    {
+      src: "/lovable-uploads/kolukkumalai-vibrant-sunrise-tea.jpg",
+      alt: "Kolukkumalai vibrant sunrise tea garden jeep safari Munnar colorful dawn organic plantation tour",
+      title: "Vibrant Sunrise Over Tea Gardens",
+      description: "Colorful vibrant sunrise illuminating Kolukkumalai tea plantations"
     }
   ];
 

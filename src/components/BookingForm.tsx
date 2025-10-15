@@ -49,15 +49,42 @@ const BookingForm = () => {
     const selectedPkg = packages.find(pkg => pkg.value === selectedPackage);
     const totalPrice = selectedPkg ? selectedPkg.price * parseInt(guests) : 0;
 
+    // Create WhatsApp message
+    const whatsappMessage = `*New Booking Request*
+
+📅 *Date:* ${format(date, "PPP")}
+🎯 *Package:* ${selectedPkg?.label}
+👥 *Guests:* ${guests}
+💰 *Total Amount:* ₹${totalPrice.toLocaleString()}
+
+👤 *Customer Details:*
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email || "Not provided"}
+
+${selectedPackage === "complete" && accommodation ? `🏨 Accommodation: ${accommodation}` : ""}
+${selectedPackage === "complete" && vehicle ? `🚗 Vehicle: ${vehicle}` : ""}
+${formData.message ? `\n📝 *Special Requests:*\n${formData.message}` : ""}`;
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappNumber = "919629609496"; // Replace with actual WhatsApp business number
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, "_blank");
+
     toast({
-      title: "Booking Request Submitted!",
-      description: `We'll contact you soon to confirm your ${selectedPkg?.label} for ${guests} guests on ${format(date, "PPP")}. Total: ₹${totalPrice.toLocaleString()}`,
+      title: "Opening WhatsApp!",
+      description: `Your booking details are ready to send. Total: ₹${totalPrice.toLocaleString()}`,
     });
 
     // Reset form
     setDate(undefined);
     setSelectedPackage("");
     setGuests("");
+    setAccommodation("");
+    setVehicle("");
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
