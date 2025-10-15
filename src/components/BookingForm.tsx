@@ -177,7 +177,7 @@ ${formData.message ? `\n📝 *Special Requests:*\n${formData.message}` : ""}`;
                       <SelectValue placeholder="How many guests?" />
                     </SelectTrigger>
                     <SelectContent>
-                      {[1, 2, 3, 4, 5, 6].map((num) => (
+                      {Array.from({ length: 100 }, (_, i) => i + 1).map((num) => (
                         <SelectItem key={num} value={num.toString()}>
                           {num} {num === 1 ? 'Guest' : 'Guests'}
                         </SelectItem>
