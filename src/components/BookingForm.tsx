@@ -174,7 +174,7 @@ ${formData.message ? `\n📝 *Special Requests:*\n${formData.message}` : ""}`;
                   </Label>
                   <Select value={guests} onValueChange={setGuests}>
                     <SelectTrigger>
-                      <SelectValue placeholder="How many guests?" />
+                      <SelectValue placeholder="How many persons are you" />
                     </SelectTrigger>
                     <SelectContent>
                       {Array.from({ length: 100 }, (_, i) => i + 1).map((num) => (
