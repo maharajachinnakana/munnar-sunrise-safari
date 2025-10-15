@@ -23,7 +23,10 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience the breathtaking sunrise at Kolukkumalai, the world's highest organic tea plantation, with our thrilling Western Ghats jeep safari adventures and panoramic mountain views.
+            Discover the ultimate adventure packages in Munnar, designed for thrill-seekers and nature lovers!
+            From exciting off-road jeep safaris to serene mountain viewpoints, waterfalls, and tea garden trails, every trip promises unforgettable moments.
+            Enjoy the beauty of Kolukkumalai, Meeshapulimala, Aanakulam, and Chaturangapara with our expert local guides who ensure a safe, scenic, and fun-filled experience.
+            Whether you're planning a short weekend trip or a full family vacation, our Munnar adventure packages include transport, accommodation, and sightseeing — all in one perfect plan! 🌿🚙☀️
           </p>
           
           {/* Key Features */}

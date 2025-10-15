@@ -38,7 +38,11 @@ const ServicesSection = () => {
             Complete Tourism <span className="text-primary">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We provide end-to-end tourism solutions including accommodation, transport, dining, and sightseeing for the perfect Munnar experience
+            Explore the best Jeep Safari adventures in Munnar with our expert local drivers!
+            Witness the breathtaking Kolukkumalai Sunrise Jeep Safari, where the golden rays touch the world's highest tea plantations.
+            Experience the wild beauty of Aanakulam Jeep Safari, famous for elephant sightings, river crossings, waterfalls, green valleys, and stunning tea garden viewpoints.
+            For thrill-seekers, the Meeshapulimala Jeep Safari offers misty mountain trails and panoramic views, while the Chaturangapara Jeep Safari gives you an unforgettable off-road experience with cool breeze and dramatic landscapes.
+            Book your Munnar Jeep Safari today and discover nature's magic from the comfort of your 4x4! 🌄🐘🍃
           </p>
         </div>
 
