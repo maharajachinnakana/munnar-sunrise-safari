@@ -28,10 +28,10 @@ const BookingForm = () => {
   const { toast } = useToast();
 
   const packages = [
-    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari + Lion Rock + Tea Factory - ₹500 per head", price: 500, jeepPrice: 3000 },
-    { value: "chathuranga", label: "Chathuranga Para Safari - ₹417 per head", price: 417, jeepPrice: 2500 },
-    { value: "annakulam", label: "Annakulam Safari (Elephant area + Waterfall) - ₹367 per head", price: 367, jeepPrice: 2200 },
-    { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹12,500 per person", price: 12500 }
+    { value: "kolukkumalai", label: "Kolukkumalai Sunrise Safari + Lion Rock + Tea Factory - ₹584 per head", price: 584, jeepPrice: 3500 },
+    { value: "chathuranga", label: "Chathuranga Para Safari - ₹584 per head", price: 584, jeepPrice: 3500 },
+    { value: "annakulam", label: "Annakulam Safari (Elephant area + Waterfall) - ₹1000per head", price:1000, jeepPrice: 6000 },
+    { value: "complete", label: "Complete Munnar Package (3D/2N) - ₹4,651 per person", price: 27906 }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -97,8 +97,8 @@ const SafariPackages = () => {
       title: "Chathuranga Para Safari",
       description: "Explore the stunning viewpoints and dramatic cliffs with panoramic valley views. Experience offroad jeep ride through Western Ghats terrain.",
       image: chathurangaImage,
-      price: "₹583",
-      pricePerJeep: "₹3,500",
+      price: "₹667",
+      pricePerJeep: "₹4,000",
       duration: "3-4 hours",
       capacity: "6 persons",
       highlights: ["Hidden Waterfalls","Scenic viewpoints", "Panoramic Mountain Views Munnar", "Wildlife Jeep Safari Munnar", "Adventure trails"],
@@ -123,8 +123,8 @@ const SafariPackages = () => {
       title: "Complete Munnar Package",
       description: "3D/2N complete package with accommodation, breakfast & dinner, campfire, stay & safari adventures.",
       image: kolukkumalaiImage,
-      price: "₹4,333",
-      totalForSix: "₹25,998",
+      price: "₹4,651",
+      totalForSix: "₹27,906",
       duration: "3 Days / 2 Nights",
       capacity: "6 persons",
       priceBreakdown: {
@@ -134,9 +134,9 @@ const SafariPackages = () => {
         },
         
         kolukkumalai: { price: "₹584", description: "Kolukkumalai Safari" },
-        chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
+        chathuranga: { price: "₹667", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
-        subtotal: "₹4,333 per head for 3D/2N",
+        subtotal: "₹4,651 per head for 3D/2N",
         extraCharges: {
         },
       },
