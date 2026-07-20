@@ -84,8 +84,8 @@ const SafariPackages = () => {
       title: "Kolukkumalai Sunrise Safari",
       description: "Witness the magical sunrise from the world's highest organic tea plantation. Visit famous Lion Rock View Point (shaped like a lion's head), experience Western Ghats sunrise safari, Bose Peak trekking, and organic tea factory tour.",
       image: kolukkumalaiImage,
-      price: "₹500",
-      pricePerJeep: "₹3,000",
+      price: "₹584",
+      pricePerJeep: "₹3,500",
       duration: "4-5 hours",
       capacity: "6 persons",
       highlights: ["Famous Lion Rock View Point Munnar", "Bose Peak trekking (+₹700)", "World's Highest Organic Tea Plantation", "Kolukkumalai Tea Estate Tour", "Panoramic Mountain Views Munnar", "Tea tasting experience"],
@@ -129,11 +129,11 @@ const SafariPackages = () => {
       capacity: "6 persons",
       priceBreakdown: {
         accommodation: {
-          price: "₹750",
+          price: "₹800",
           description: "Stay+Breakfast+Dinner+campfire Per Day (3D/2N=2250)",
         },
         
-        kolukkumalai: { price: "₹500", description: "Kolukkumalai Safari" },
+        kolukkumalai: { price: "₹584", description: "Kolukkumalai Safari" },
         chathuranga: { price: "₹583", description: "Chathuranga Para Safari" },
         annakulam: { price: "₹1,000", description: "Annakulam Safari" },
         subtotal: "₹4,333 per head for 3D/2N",
