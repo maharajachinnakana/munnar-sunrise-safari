@@ -53,7 +53,7 @@ const Hero = () => {
               className="text-lg px-8 py-6 h-auto"
               onClick={() => window.open('https://wa.me/919446909285?text=Hi! I want to book a safari adventure. Please help me with the booking.', '_blank')}
             >
-              Book Your Safari - ₹500/head
+              Book Your Safari - ₹584/head
             </Button>
             <Button 
               variant="outline" 
