@@ -62,7 +62,7 @@ const Footer = () => {
                 <p className="font-medium group-hover:text-sunrise transition-colors">
                   Kolukkumalai Sunrise
                 </p>
-                <p className="text-sm text-mountain-foreground/80">₹3,000 per jeep</p>
+                <p className="text-sm text-mountain-foreground/80">₹3,500 per jeep</p>
               </div>
               <div className="group cursor-pointer">
                 <p className="font-medium group-hover:text-sunrise transition-colors">
